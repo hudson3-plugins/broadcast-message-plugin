@@ -1,0 +1,65 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+<l:layout title="${%Log}">
+  <st:include it="${app}" page="sidepanel.jelly"/>
+  <l:main-panel xmlns:local="local">
+    <h1>
+    	<img src="${imagesURL}/48x48/${it.iconFileName}" alt="${it.displayName}"/>
+    	${%Custom Messages}
+    </h1>
+
+    <d:taglib uri="local">
+      <d:tag name="row">
+        <tr>
+          
+          <td width="32">
+            <img src="${imagesURL}/48x48/${icon}" width="32" height="32" alt=""/>
+          </td>
+          
+          <td style="padding-left:2em">
+            <a href="${href}">
+              ${name}
+            </a>
+          </td>
+          
+          <td width="150">
+            ${modificator}
+          </td>
+          
+          <td width="64">
+            <d:invokeBody/>
+          </td>
+        
+        </tr>
+      </d:tag>
+    </d:taglib>
+
+    <table id="customMsgs" class="sortable pane bigtable">
+      <tr>
+        <th width="32">S</th>
+        <th initialSortDir="down">${%Name}</th>
+        <th width="150">${%Last modified by}</th>
+        <th width="64"/>
+      </tr>
+      
+      <j:forEach var="cm" items="${it.customMessages.values()}">
+        <local:row name="${cm.name}" modificator="${cm.modificator}" icon="${cm.iconFileName}" href="${cm.name}/">
+          <a href="${cm.name}/configure">
+            <img src="${imagesURL}/32x32/setting.png" width="32" height="32" alt="[configure]" title="Configure"/>
+          </a>
+          <a href="${cm.name}/delete">
+            <img src="${imagesURL}/24x24/edit-delete.png" width="32" height="32" alt="[delete]" title="Delete"/>
+          </a>
+        </local:row>
+      </j:forEach>
+      <tr>
+        <td colspan="4" style="height:32px; padding-left: 48px">
+          <form method="get" action="new">
+            <f:submit value="${%Add new custom message}" />
+          </form>
+        </td>
+      </tr>
+    </table>
+  </l:main-panel>
+</l:layout>
+</j:jelly>

@@ -1,0 +1,25 @@
+<?jelly escape-by-default='false'?>
+<j:jelly xmlns:j="jelly:core">
+
+  <j:forEach var="cm" items="${it.customMessages.values()}">
+  	<j:if test="${cm.checkActive}">
+      <div style='background: ${cm.color} url("${imagesURL}/24x24/${cm.icon}") no-repeat 5px 5px;
+    			  text-align: center;
+    			  font-weight: bold;
+    			  color: white;
+    			  margin-left: 2em;
+    			  margin-right: 2em;
+    			  margin-bottom: 5px;
+    			  padding: 10px;
+    			  border-radius: 4px;'>
+	 
+	    <div style='display: inline-block; width: 85%;'>
+	      ${cm.message}
+	    </div>
+	    <div style='display: inline-block; width: 15%; vertical-align: top;'>
+	      ${cm.contact}
+	    </div>
+	  </div>
+	</j:if>
+  </j:forEach>
+</j:jelly>

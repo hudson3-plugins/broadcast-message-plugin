@@ -1,0 +1,55 @@
+<!--
+  Create a new CustomMessage
+-->
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <l:layout norefresh="true">
+    <st:include it="${app}" page="sidepanel.jelly" />
+
+    <l:main-panel>
+      <f:form method="post" action="newCustomMessage">
+        <f:entry title="${%Name: }">
+          <input type="text" name="name" class="setting-input" id="box"/>
+          <p class="setting-description">${%Global message name}</p>
+          <script>
+            document.getElementById('box').focus();
+          </script>
+        </f:entry>
+        
+		<f:entry title="${%Message: }">
+          <textarea name="message" class="setting-input"></textarea>
+          <p class="setting-description">${%Message to display}</p>
+        </f:entry>
+        
+        <f:entry title="${%Color: }" help="/plugin/hudson-broadcast-plugin/color.html">
+          <input type="text" name="color" class="setting-input"/>
+          <p class="setting-description">${%Color of the message frame}</p>
+        </f:entry>
+        
+        <f:entry title="${%Icon: }" help="/plugin/hudson-broadcast-plugin/icon.html">
+          <input type="text" name="icon" class="setting-input"/>
+          <p class="setting-description">${%Icon for the message}</p>
+        </f:entry>
+        
+        <f:entry title="${%Start date: }">
+          <input type="text" name="startDate" class="setting-input"/>
+          <p class="setting-description">${%Date format: yyyy.MM.dd HH:mm, example: 2014.09.12 15:00}</p>
+        </f:entry>
+        
+        <f:entry title="${%Finish date: }">
+          <input type="text" name="finishDate" class="setting-input"/>
+          <p class="setting-description">${%Date format: yyyy.MM.dd HH:mm, example: 2014.09.12 15:00}</p>
+        </f:entry>
+
+		<f:entry title="${%Contact: }">
+          <textarea name="contact" class="setting-input"/>
+          <p class="setting-description">${%Text displayed on right side of global message. Who should you contact in any case.}</p>
+        </f:entry>
+        
+        <f:block>
+          <f:submit value="Add" />
+        </f:block>
+      </f:form>
+    </l:main-panel>
+  </l:layout>
+</j:jelly>

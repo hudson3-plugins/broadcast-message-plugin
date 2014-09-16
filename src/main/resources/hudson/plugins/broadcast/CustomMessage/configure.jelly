@@ -1,0 +1,51 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+<l:layout norefresh="true">
+  <st:include it="${app}" page="sidepanel.jelly" />
+  <l:main-panel>
+    <f:form method="post" action="configSubmit">
+      <j:set var="instance" value="${it}"/>
+      
+      <f:entry title="${%Name}">
+        <f:textbox field="name"/>
+        <p class="setting-description">${%Global message name}</p>
+      </f:entry>
+
+      <f:entry title="${%Message}">
+        <f:textarea field="message"/>
+        <p class="setting-description">${%Message to display}</p>
+      </f:entry>
+      
+      <f:entry title="${%Color: }" help="/plugin/hudson-broadcast-plugin/color.html">
+        <f:textbox field="color"/>
+        <p class="setting-description">${%Color of the message frame}</p>
+      </f:entry>
+        
+      <f:entry title="${%Icon: }" help="/plugin/hudson-broadcast-plugin/icon.html">
+        <f:textbox field="icon"/>
+        <p class="setting-description">${%Icon for the message}</p>
+      </f:entry>
+        
+      <f:entry title="${%Start date: }">
+        <f:textbox field="formatStartDate"/>
+        <p class="setting-description">${%Date format: yyyy.MM.dd HH:mm, example: 2014.09.12 15:00}</p>
+      </f:entry>
+        
+      <f:entry title="${%Finish date: }">
+        <f:textbox field="formatFinishDate"/>
+        <p class="setting-description">${%Date format: yyyy.MM.dd HH:mm, example: 2014.09.12 15:00}</p>
+      </f:entry>
+      
+      <f:entry title="${%Contact: }">
+        <f:textarea field="contact"/>
+        <p class="setting-description">${%Text displayed on right side of global message. Who should you contact in any case.}</p>
+      </f:entry>
+
+      <f:block>
+        <f:submit value="${%Save}"/>
+      </f:block>
+      
+    </f:form>
+  </l:main-panel>
+</l:layout>
+</j:jelly>

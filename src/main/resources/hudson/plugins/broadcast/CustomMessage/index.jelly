@@ -1,0 +1,72 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+<l:layout title="Message" permission="${app.ADMINISTER}">
+  <st:include it="${app}" page="sidepanel.jelly"/>
+  
+  <l:main-panel>
+    <h1>
+    	<img src="${imagesURL}/48x48/notepad.gif" alt=""/>
+    	${it.displayName}
+    </h1>
+    
+    <table id="msgData" class="sortable pane bigtable">
+      <tr>
+        <th width="250" initialSortDir="down">${%Name}</th>
+        <th>${%Value}</th>
+      </tr>
+      <tr height="35">
+        <td><b>${%Active}</b></td>
+        <td><img src="${imagesURL}/48x48/${it.iconFileName}" width="32" height="32" alt=""/></td>
+      </tr>
+      <tr height="35">
+        <td><b>${%Message}</b></td>        
+        <td>${it.displayMessage}</td>
+      </tr>
+      <tr height="35">
+        <td><b>${%Creator}</b></td>        
+        <td>${it.creator}</td>
+      </tr>
+      <tr height="35">
+        <td><b>${%Last modificator}</b></td>        
+        <td>${it.modificator}</td>
+      </tr>
+      <tr height="35">
+        <td><b>${%Creation date}</b></td>        
+        <td>${it.createdDate}</td>
+      </tr>
+      <tr height="35">
+        <td><b>${%Modification date}</b></td>        
+        <td>${it.modifiedDate}</td>
+      </tr>
+      <tr height="35">
+        <td><b>${%Color}</b></td>        
+        <td>${it.color}</td>
+      </tr>
+      <tr height="35">
+        <td><b>${%Icon}</b></td>        
+        <td><img src="${imagesURL}/48x48/${it.icon}" width="32" height="32" alt=""/></td>
+      </tr>
+      <tr height="35">
+        <td><b>${%Start date}</b></td>        
+        <td>${it.startDate}</td>
+      </tr>
+      <tr height="35">
+        <td><b>${%Finish date}</b></td>        
+        <td>${it.finishDate}</td>
+      </tr>
+      <tr height="35">
+      	<td><b>${%Contact}</b></td>
+      	<td>${it.contact}</td>
+      </tr>
+      <tr>
+        <td colspan="2" style="height:35px; padding-left: 250px">
+          <form method="get" action="configure">
+            <f:submit value="${%Configure}" />
+          </form>
+        </td>
+      </tr>
+    </table>
+  </l:main-panel>
+  
+</l:layout>
+</j:jelly>

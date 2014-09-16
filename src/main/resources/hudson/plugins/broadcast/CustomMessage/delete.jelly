@@ -1,0 +1,15 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+<l:layout norefresh="true">
+  <st:include it="${app}" page="sidepanel.jelly"/>
+  
+  <l:main-panel>    
+    <form method="post" action="deleteMessage">
+      <h4>${%Are you sure about deleting this message?}</h4>
+      <f:submit value="${%Yes}"/>
+      <input type="button" value="${%No}"/>
+    </form>    
+  </l:main-panel>
+  
+</l:layout>
+</j:jelly>

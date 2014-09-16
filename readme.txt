@@ -1,0 +1,1 @@
+Hudson plugin allowing to broadcast a global message to all users.
