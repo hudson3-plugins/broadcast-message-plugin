@@ -16,5 +16,13 @@
     <packaging>hpi</packaging>
 
     <name>Hudson Broadcast Plugin</name>
+	
+	<developers>
+		<developer>
+			<id>skyline</id>
+			<name>Patryk Szczęch</name>
+			<email>patryk.szczech@gmail.com</email>
+		</developer>
+	</developers>
 
 </project>
