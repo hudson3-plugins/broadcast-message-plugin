@@ -11,7 +11,7 @@
 
     <groupId>org.hudsonci.plugins</groupId>
     <artifactId>broadcast-message-plugin</artifactId>
-    <version>1.0a-SNAPSHOT</version>
+    <version>1.0a</version>
     <packaging>hpi</packaging>
     <name>Broadcast Message Plugin for Hudson</name>
     <description>Broadcast Message Plugin for Hudson</description>
@@ -38,7 +38,7 @@
 
 	<scm>
 		<connection>scm:git:git://github.com/hudson3-plugins/broadcast-message-plugin.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com/hudson3-plugins/broadcast-message-plugin.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:hudson3-plugins/broadcast-message-plugin.git</developerConnection>
 		<url>https://github.com/hudson3-plugins/broadcast-message-plugin</url>
 	</scm>
 	
