@@ -16,7 +16,7 @@
 
     <groupId>org.hudsonci.plugins</groupId>
     <artifactId>broadcast-message-plugin</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     
     <properties>
        <hudsonTags>scm,builder</hudsonTags>
