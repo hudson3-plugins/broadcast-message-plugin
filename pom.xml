@@ -8,14 +8,29 @@
         <!-- which version of Hudson is this plugin built against? -->
         <version>3.1.2</version>
     </parent>
+    <!-- <parent>
+    	<groupId>org.jvnet.hudson.plugins</groupId>
+    	<artifactId>hudson-plugin-parent</artifactId>
+    	<version>1.398</version>
+  	</parent> -->
 
     <groupId>org.hudsonci.plugins</groupId>
     <artifactId>broadcast-message-plugin</artifactId>
     <version>1.0</version>
+    
+    <properties>
+       <hudsonTags>scm,builder</hudsonTags>
+   	</properties>
 
     <packaging>hpi</packaging>
 
-    <name>Hudson Broadcast Plugin</name>
+    <name>Broadcast Message Plugin for Hudson</name>
+	
+	<scm>
+    	<connection>scm:git:git://github.com/hudson3-plugins/broadcast-message-plugin.git</connection>
+   		<developerConnection>scm:git:ssh://git@github.com:hudson3-plugins/broadcast-message-plugin.git</developerConnection>
+    	<url>https://github.com/hudson3-plugins/broadcast-message-plugin</url>
+	</scm>
 	
 	<developers>
 		<developer>
