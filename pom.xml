@@ -17,8 +17,8 @@
     <description>Broadcast Message Plugin for Hudson</description>
     
     <properties>
-       <hudsonTags>scm,builder</hudsonTags>
-   	</properties>
+       <hudsonTags>notifiers</hudsonTags>
+    </properties>
     
     <licenses>
     	<license>
