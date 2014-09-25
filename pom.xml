@@ -11,7 +11,7 @@
 
     <groupId>org.hudsonci.plugins</groupId>
     <artifactId>broadcast-message-plugin</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.2</version>
     <packaging>hpi</packaging>
     <name>broadcast-message-plugin</name>
     <description>Broadcast Message Plugin for Hudson</description>
