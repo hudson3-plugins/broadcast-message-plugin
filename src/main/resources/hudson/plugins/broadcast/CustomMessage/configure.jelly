@@ -40,12 +40,12 @@ THE SOFTWARE.
         <p class="setting-description">${%Message to display}</p>
       </f:entry>
       
-      <f:entry title="${%Color: }" help="/plugin/hudson-broadcast-plugin/color.html">
+      <f:entry title="${%Color: }" help="/plugin/broadcast-message-plugin/color.html">
         <f:textbox field="color"/>
         <p class="setting-description">${%Color of the message frame}</p>
       </f:entry>
         
-      <f:entry title="${%Icon: }" help="/plugin/hudson-broadcast-plugin/icon.html">
+      <f:entry title="${%Icon: }" help="/plugin/broadcast-message-plugin/icon.html">
         <f:textbox field="icon"/>
         <p class="setting-description">${%Icon for the message}</p>
       </f:entry>
