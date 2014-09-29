@@ -27,7 +27,7 @@ THE SOFTWARE.
 
   <j:forEach var="cm" items="${it.customMessages.values()}">
   	<j:if test="${cm.checkActive}">
-      <div style='background: ${cm.color} url("${imagesURL}/24x24/${cm.icon}") no-repeat 5px 5px;
+      <div style='background: ${cm.color} url("${imagesURL}/48x48/${cm.icon}") no-repeat 5px 5px / 24px 24px;
     			  text-align: center;
     			  font-weight: bold;
     			  color: white;

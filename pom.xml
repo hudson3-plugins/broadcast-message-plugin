@@ -14,7 +14,10 @@
     <version>0.3-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <name>broadcast-message-plugin</name>
-    <description>Broadcast Message Plugin for Hudson</description>
+    <url>http://wiki.hudson-ci.org/display/HUDSON/Broadcast+Message+Plugin</url>
+	<description>
+		broadcast-message-plugin is a simple plugin which allows administrators to broadcast a custom global message visible to all Hudson instance users. Those messages are similiar to "Hudson is preparing to shutdown" message, but they are customizable.
+	</description>
     
     <properties>
        <hudsonTags>notifiers</hudsonTags>
@@ -54,6 +57,4 @@
     		<version>1.3.2</version>
 		</dependency>
     </dependencies>
-
-    <url>https://github.com/hudson3-plugins/broadcast-message-plugin</url>
 </project>
